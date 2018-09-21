@@ -57,7 +57,7 @@ namespace CouchDBPortfolio.Controllers
             
             using (var client = new MyCouchClient(new DbConnectionInfo("http://localhost:5984/", "test")))
             {
-                var request = new Request
+                var request = new GetDocumentRequest("6f0b61dc18212616462956ad7d0024a4");
                 
                 var response = await client.Documents.GetAsync(request);
                 
