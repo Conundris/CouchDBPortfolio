@@ -40,8 +40,6 @@ namespace CouchDBPortfolio.Controllers
             using (var client = new MyCouchClient(new DbConnectionInfo("http://localhost:5984/", "test")))
             {
                 return await client.Documents.PostAsync("{\"name\":\"Daniel\"}");
-                
-               
             }
             
             /*using(var client = new MyCouchServerClient("http://localhost:5984"))

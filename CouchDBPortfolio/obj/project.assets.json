@@ -7193,10 +7193,11 @@
       ]
     },
     "Microsoft.NETCore.Platforms/2.0.0": {
-      "sha512": "VdLJOCXhZaEMY7Hm2GKiULmn7IEPFE4XC5LPSfBVCUIA8YLZVh846gtfBJalsPQF2PlzdD7ecX7DZEulJ402ZQ==",
+      "sha512": "5BdAWDgMNwf90L0J+C/eh6kfHDa37ViL1cBL1nv5zPA4TB2cGV51YiQyvzCEy9DBE0LwwMI4+PkUpIekKyocSA==",
       "type": "package",
       "path": "microsoft.netcore.platforms/2.0.0",
       "files": [
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard1.0/_._",
@@ -9468,10 +9469,11 @@
       ]
     },
     "System.Net.Http/4.3.0": {
-      "sha512": "sYg+FtILtRQuYWSIAuNOELwVuVsxVyJGWQyOnlAzhV4xvhyFnON1bAzYYC+jjRW8JREM45R0R5Dgi8MTC5sEwA==",
+      "sha512": "Z1UfSF6dlpCdZdxh6LeoGlYH+q6ptG/iiIWgUUeKhE3DbQACmZkU7Sz2nOX0qdHjz72MOdYRbkSJ5Qwl6sZgvg==",
       "type": "package",
       "path": "system.net.http/4.3.0",
       "files": [
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/Xamarinmac20/_._",
@@ -12320,37 +12322,29 @@
     ".NETCoreApp,Version=v2.0": [
       "Microsoft.AspNetCore.All >= 2.0.3",
       "Microsoft.NETCore.App >= 2.0.0",
-      "MyCouch >= 6.0.0"
+      "MyCouch >= 6.0.0",
+      "Newtonsoft.Json >= 11.0.2"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\exceeds\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/home/exceeds/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\exceeds\\RiderProjects\\CouchDBPortfolio\\CouchDBPortfolio\\CouchDBPortfolio.csproj",
+      "projectUniqueName": "/home/exceeds/RiderProjects/CouchDBPortfolio/CouchDBPortfolio/CouchDBPortfolio.csproj",
       "projectName": "CouchDBPortfolio",
-      "projectPath": "C:\\Users\\exceeds\\RiderProjects\\CouchDBPortfolio\\CouchDBPortfolio\\CouchDBPortfolio.csproj",
-      "packagesPath": "C:\\Users\\exceeds\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\exceeds\\RiderProjects\\CouchDBPortfolio\\CouchDBPortfolio\\obj\\",
+      "projectPath": "/home/exceeds/RiderProjects/CouchDBPortfolio/CouchDBPortfolio/CouchDBPortfolio.csproj",
+      "packagesPath": "/home/exceeds/.nuget/packages/",
+      "outputPath": "/home/exceeds/RiderProjects/CouchDBPortfolio/CouchDBPortfolio/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\exceeds\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        "/home/exceeds/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -12380,6 +12374,10 @@
           "MyCouch": {
             "target": "Package",
             "version": "[6.0.0, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[11.0.2, )"
           }
         },
         "imports": [

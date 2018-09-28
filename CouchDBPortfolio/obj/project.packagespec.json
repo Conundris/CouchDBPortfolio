@@ -1,15 +1,11 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "C:\\Users\\exceeds\\RiderProjects\\CouchDBPortfolio\\CouchDBPortfolio\\CouchDBPortfolio.csproj",
+    "projectUniqueName": "/home/exceeds/RiderProjects/CouchDBPortfolio/CouchDBPortfolio/CouchDBPortfolio.csproj",
     "projectName": "CouchDBPortfolio",
-    "projectPath": "C:\\Users\\exceeds\\RiderProjects\\CouchDBPortfolio\\CouchDBPortfolio\\CouchDBPortfolio.csproj",
-    "outputPath": "C:\\Users\\exceeds\\RiderProjects\\CouchDBPortfolio\\CouchDBPortfolio\\obj\\",
+    "projectPath": "/home/exceeds/RiderProjects/CouchDBPortfolio/CouchDBPortfolio/CouchDBPortfolio.csproj",
+    "outputPath": "/home/exceeds/RiderProjects/CouchDBPortfolio/CouchDBPortfolio/obj/",
     "projectStyle": "PackageReference",
-    "fallbackFolders": [
-      "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback",
-      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-    ],
     "originalTargetFrameworks": [
       "netcoreapp2.0"
     ],
@@ -40,6 +36,10 @@
         "MyCouch": {
           "target": "Package",
           "version": "[6.0.0, )"
+        },
+        "Newtonsoft.Json": {
+          "target": "Package",
+          "version": "[11.0.2, )"
         }
       },
       "imports": [
