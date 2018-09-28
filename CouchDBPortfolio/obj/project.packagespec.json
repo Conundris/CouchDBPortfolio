@@ -1,11 +1,14 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/home/exceeds/RiderProjects/CouchDBPortfolio/CouchDBPortfolio/CouchDBPortfolio.csproj",
+    "projectUniqueName": "C:\\Users\\exceeds\\RiderProjects\\CouchDBPortfolio\\CouchDBPortfolio\\CouchDBPortfolio.csproj",
     "projectName": "CouchDBPortfolio",
-    "projectPath": "/home/exceeds/RiderProjects/CouchDBPortfolio/CouchDBPortfolio/CouchDBPortfolio.csproj",
-    "outputPath": "/home/exceeds/RiderProjects/CouchDBPortfolio/CouchDBPortfolio/obj/",
+    "projectPath": "C:\\Users\\exceeds\\RiderProjects\\CouchDBPortfolio\\CouchDBPortfolio\\CouchDBPortfolio.csproj",
+    "outputPath": "C:\\Users\\exceeds\\RiderProjects\\CouchDBPortfolio\\CouchDBPortfolio\\obj\\",
     "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
     "originalTargetFrameworks": [
       "netcoreapp2.0"
     ],

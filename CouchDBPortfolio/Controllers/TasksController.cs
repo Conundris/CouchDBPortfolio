@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using CouchDBPortfolio.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -17,6 +18,8 @@ namespace CouchDBPortfolio.Controllers
         [HttpPost]
         public async Task<DocumentHeaderResponse> Create([FromBody] TodoTask model)
         {
+            Console.Write(ModelState.IsValid ? "YAY" : "NO");
+            
             using (var client = new MyCouchClient(new DbConnectionInfo("http://localhost:5984/", "test")))
             {
                 //client.Documents.PostAsync()
@@ -29,8 +32,6 @@ namespace CouchDBPortfolio.Controllers
             {
                 
             }*/
-            
-            
         }
     }
 }
