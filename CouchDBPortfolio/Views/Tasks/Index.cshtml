@@ -1,8 +1,62 @@
-@model TodoTask
+@model IEnumerable<TodoTask>
+
 
 @{
     ViewBag.Title = "Tasks";
-    Layout = "_Layout";
 }
 
 <h2>Tasks</h2>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rev)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tag)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.isDone)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.rev)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.description)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.tag)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.isDone)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.id, rev=item.rev }) |
+                @Html.ActionLink("Details", "Details", new { id=item.id, rev=item.rev }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.id })
+            </td>
+        </tr>
+    }
+</table>
