@@ -1,14 +1,37 @@
 @model TodoTask
 
-<!DOCTYPE html>
+<div class="p-answer">
 
-<html>
-<head>
-    <title>Create Task</title>
-</head>
-<body>
-<div>
-      
+    <div class="answerInput">
+
+        @using (Html.BeginForm("Create", "Tasks", FormMethod.Post, new { id = "answerform" }))
+        {
+            @Html.AntiForgeryToken()
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.name)
+                @Html.EditorFor(model => model.name, new {htmlAttributes = new {@class = "form-control"}})
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.description)
+                @Html.TextAreaFor(model => model.description, new { @class = "form-control", id = "markdownEditor" })
+            </div>
+            
+            <div class="form-group">
+                @Html.LabelFor(model => model.tag)
+                @Html.EditorFor(model => model.tag, new {htmlAttributes = new {@class = "form-control"}})    
+            </div>
+            
+            <div class="form-group">
+                @Html.LabelFor(model => model.isDone)
+                @Html.CheckBoxFor(model => model.isDone)    
+            </div>
+            
+            <input type="submit" value="Save" class="btn btn-primary" id="answerFormBtn" />
+        }
+
+    </div>
+
 </div>
-</body>
-</html>

@@ -11,6 +11,8 @@
         <e p="bundleconfig.json" t="Include" />
         <e p="Controllers" t="Include">
           <e p="HomeController.cs" t="Include" />
+          <e p="SearchController.cs" t="Include" />
+          <e p="StatsController.cs" t="Include" />
           <e p="TasksController.cs" t="Include" />
         </e>
         <e p="CouchDBPortfolio.csproj" t="IncludeRecursive" />
@@ -35,10 +37,16 @@
             <e p="Contact.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
           </e>
+          <e p="Search" t="Include">
+            <e p="Index.cshtml" t="Include" />
+          </e>
           <e p="Shared" t="Include">
             <e p="_Layout.cshtml" t="Include" />
             <e p="_ValidationScriptsPartial.cshtml" t="Include" />
             <e p="Error.cshtml" t="Include" />
+          </e>
+          <e p="Stats" t="Include">
+            <e p="Index.cshtml" t="Include" />
           </e>
           <e p="Tasks" t="Include">
             <e p="Create.cshtml" t="Include" />
