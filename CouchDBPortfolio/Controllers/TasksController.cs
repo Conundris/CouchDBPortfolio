@@ -20,7 +20,7 @@ namespace CouchDBPortfolio.Controllers
         // GET
         public async Task<IActionResult> Index()
         {
-            using (var client = new MyCouchClient(new DbConnectionInfo("http://localhost:5984/", "test")))
+            using (var client = new MyCouchClient(new DbConnectionInfo("http://localhost:5984/", "tasks")))
             {
                 var tasks = new List<TodoTask>();
                 
@@ -35,8 +35,7 @@ namespace CouchDBPortfolio.Controllers
                     var model = JsonConvert.DeserializeObject<TodoTask>(responseItem.IncludedDoc);
                     model._id = responseItem.Id;
                     
-                    var revJObject = (JObject)JsonConvert.DeserializeObject(responseItem.Value);
-                    var revValue = revJObject["rev"].Value<string>(); 
+                    var revValue = responseItem.Value.Replace("\"", ""); 
                     
                     model._rev = revValue;
 
@@ -56,9 +55,7 @@ namespace CouchDBPortfolio.Controllers
         [HttpPost]
         public async Task<IActionResult> Create([Bind(include:"name, description, isDone, tag")] TodoTask model)
         {
-            Console.Write(ModelState.IsValid ? "YAY" : "NO");
-            
-            using (var client = new MyCouchClient(new DbConnectionInfo("http://localhost:5984/", "test")))
+            using (var client = new MyCouchClient(new DbConnectionInfo("http://localhost:5984/", "tasks")))
             {
                 var content = JsonConvert.SerializeObject(model);
                 
@@ -72,7 +69,7 @@ namespace CouchDBPortfolio.Controllers
 
         public async Task<IActionResult> Details(string id, string rev)
         {
-            using (var client = new MyCouchClient(new DbConnectionInfo("http://localhost:5984/", "test")))
+            using (var client = new MyCouchClient(new DbConnectionInfo("http://localhost:5984/", "tasks")))
             {
                 var task = new TodoTask();
                 
@@ -94,7 +91,7 @@ namespace CouchDBPortfolio.Controllers
         public async Task<IActionResult> Edit([Bind(include:"_id, _rev, name, description, isDone, tag")] TodoTask model)
         {
             
-            using (var client = new MyCouchClient(new DbConnectionInfo("http://localhost:5984/", "test")))
+            using (var client = new MyCouchClient(new DbConnectionInfo("http://localhost:5984/", "tasks")))
             {
                 var content = JsonConvert.SerializeObject(model);
                 
@@ -108,7 +105,7 @@ namespace CouchDBPortfolio.Controllers
         
         public async Task<IActionResult> Delete(string id, string rev)
         {
-            using (var client = new MyCouchClient(new DbConnectionInfo("http://localhost:5984/", "test")))
+            using (var client = new MyCouchClient(new DbConnectionInfo("http://localhost:5984/", "tasks")))
             {
                 var request = new DeleteDocumentRequest(id, rev);
 

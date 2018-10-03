@@ -15,7 +15,7 @@ namespace CouchDBPortfolio.Controllers
         // GET
         public async Task<IActionResult> Index()
         {
-            using (var client = new MyCouchClient(new DbConnectionInfo("http://localhost:5984/", "test")))
+            using (var client = new MyCouchClient(new DbConnectionInfo("http://localhost:5984/", "tasks")))
             {
                 var tasks = new List<TodoTask>();
                 
