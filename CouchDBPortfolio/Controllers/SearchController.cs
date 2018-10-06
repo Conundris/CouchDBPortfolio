@@ -15,11 +15,17 @@ namespace CouchDBPortfolio.Controllers
         // GET
         public async Task<IActionResult> Index()
         {
+            var resultList = new List<StatsModel>();
+            getByIsDone(resultList);
+
+            return View();
+        }
+
+        private async void getByIsDone(List<StatsModel> resultList)
+        {
             using (var client = new MyCouchClient(new DbConnectionInfo("http://localhost:5984/", "tasks")))
             {
-                var tasks = new List<TodoTask>();
-                
-                var request = new QueryViewRequest("views", "allDocs") {IncludeDocs = true};
+                var request = new QueryViewRequest("views", "byIsDone") {Reduce = true, Group = true};
 
                 var response = await client.Views.QueryAsync(request);
                 
@@ -34,13 +40,11 @@ namespace CouchDBPortfolio.Controllers
                     var revValue = revJObject["rev"].Value<string>(); 
                     
                     model._rev = revValue;
-
                     
-                    tasks.Add(model);
+                    //add to list
                 }
-                
-                return View(tasks);
-            }
+            } 
         }
+        
     }
 }

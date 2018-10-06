@@ -18,6 +18,7 @@
         <e p="CouchDBPortfolio.csproj" t="IncludeRecursive" />
         <e p="Models" t="Include">
           <e p="ErrorViewModel.cs" t="Include" />
+          <e p="StatsModel.cs" t="Include" />
           <e p="TodoTask.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
